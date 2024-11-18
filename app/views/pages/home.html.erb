@@ -1,2 +1,12 @@
 <h1>Pages#home</h1>
 <p>Find me in app/views/pages/home.html.erb</p>
+
+<h2>Is Someone sigend in?</h2>
+<p>Answer: <%= user_signed_in? ? "yes" : "no" %></p>
+
+<h2>Who is signed in?</h2>
+<% if user_signed_in? %>
+  <%= current_user.email %>
+<% else %>
+  <p>No one</p>
+<% end %>

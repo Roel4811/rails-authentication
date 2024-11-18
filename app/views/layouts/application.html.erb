@@ -11,6 +11,9 @@
   </head>
 
   <body>
+    <%# this is where the html for the specific page is injected %>
+    <%= render "shared/navbar" %>
+    <%= render "shared/flashes" %>
     <%= yield %>
   </body>
 </html>
